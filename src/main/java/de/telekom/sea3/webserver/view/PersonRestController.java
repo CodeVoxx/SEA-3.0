@@ -1,3 +1,5 @@
+// Gibt Json Code zurück
+
 package de.telekom.sea3.webserver.view;
 
 import org.springframework.beans.factory.annotation.Autowired;

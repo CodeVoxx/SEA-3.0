@@ -1,3 +1,5 @@
+// PersonController gibt HTML zurück
+
 package de.telekom.sea3.webserver.view;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -8,7 +10,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import de.telekom.sea3.webserver.service.PersonService;
 
 @Controller
-public class PersonController {
+public class PersonHTMLController {
 
 	private static final String HTMLTEMPLATE = "<!DOCTYPE html> <html lang='de'> "
 			+ "<head> <meta charset='utf-8'> <meta name='viewport' content='width=device-width, "
@@ -17,9 +19,9 @@ public class PersonController {
 	private PersonService personService; // Variable personService
 
 	@Autowired
-	public PersonController(PersonService personService) { // Construtor PersonController
+	public PersonHTMLController(PersonService personService) { // Construtor PersonController
 		super();
-		System.out.println("** PersonController instanziert --> ipse" + this.toString());
+		System.out.println("** PersonHTMLController instanziert --> ipse" + this.toString());
 		System.out.println("** PersonService instanziert --> " + personService.toString());
 		this.personService = personService; // Übergabe personService
 	}
