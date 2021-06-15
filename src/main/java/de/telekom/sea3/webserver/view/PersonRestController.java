@@ -21,12 +21,13 @@ public class PersonRestController {
 		this.personService = personService; // Übergabe personService
 	}
 
-	// URL: "http://localhost:8080/allpersons"
-	@GetMapping("/allpersons")
+	/** @see URL: <a href="http://localhost:8080/allpersons">Das ist eine URL</a>
+	 * */
+	@GetMapping("/json/allpersons")
 	@ResponseBody  //sagt Spring Framework dass die Antwort in den Body gepack werden soll
 	public String getAllPersons() {
 		Personen personen = personService.getAllPerson();
-		personen.toJson();
+//		personen.toJson();
 		String string1 ="{\n"
 				+ "	\"personen\": [\n"
 				+ "		{\n"
@@ -46,6 +47,18 @@ public class PersonRestController {
 				+ "		}\n"
 				+ "	]\n"
 				+ "}";
+		return string1;
+
+	}
+	
+	@GetMapping("/json/allpersons/size")
+	@ResponseBody  //sagt Spring Framework dass die Antwort in den Body gepack werden soll
+	public String getSize() {
+		int size = personService.getSize();
+//		personen.toJson();
+		String string1 =String.format("{\n"
+				+ "	\"size\": %d\n"
+				+ "}",size);
 		return string1;
 
 	}
