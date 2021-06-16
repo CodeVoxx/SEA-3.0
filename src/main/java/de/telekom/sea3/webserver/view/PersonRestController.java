@@ -1,6 +1,7 @@
 // Gibt Json Code zurück
 package de.telekom.sea3.webserver.view;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -36,10 +37,12 @@ public class PersonRestController {
 		return new Size(personService.getSize());
 	}
 	
-	@GetMapping("/json/person/{id}")  // id in geschweiften Klammern ist Variabel
-	public Person getPerson(@PathVariable("id") int id) {
-		return personService.get(id);
+	@DeleteMapping("/json/person/{id}")  // id in geschweiften Klammern ist Variabel
+	public Person getPerson(@PathVariable("id") String id) {
+		return personService.del(id);
 	}
+	
+	
 	
 	@PostMapping("/json/person")
 	public Person addPerson(@RequestBody Person person)  {

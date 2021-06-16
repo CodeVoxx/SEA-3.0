@@ -7,14 +7,14 @@ function getJson(irgendwas) { 	// irgendwas beinhaltet json mit allen kommunikat
 function getTxtFromJsonUndPackInsHTML(myjson) {
 	var tabelle = document.getElementById("tid001");
 	var i = 1;
-//	var id = 1;
-		for (var laufvariable of myjson.personen) {
+	//	var id = i;
+	for (var laufvariable of myjson.personen) {
 		// neue Zeile am Ende der exist. Tabelle anfügen
 		tabelle.insertAdjacentHTML("beforeend",
 			"<tr>"
 			+ `<td> ${i++} </td>`
 			+ "<td><img src='" + getIcon(laufvariable.anrede) + "'></td>"
-			+ "<td>" + laufvariable.id + "</td>"			
+			+ "<td>" + laufvariable.id + "</td>"
 			+ "<td>" + laufvariable.anrede + "</td>"
 			+ "<td>" + laufvariable.vorname + "</td>"
 			+ "<td>" + laufvariable.nachname + "</td>"
@@ -40,7 +40,7 @@ function getIcon(anrede) {
 }
 
 // abfrage des clicks mit übergabe der Daten
-function oninputclick(event){
+function oninputclick(event) {
 	event.preventDefault();		// verhindert, ()GET request) dass das event weiter vom browser verarbeitet wird
 	console.log("click");
 	var id = document.getElementById("id").value;
@@ -61,23 +61,41 @@ function oninputclick(event){
 	console.log(anrede);
 	var email = document.getElementById("email").value;
 	console.log(email);
-	var jsondata=`{ "id": "${id}","anrede": "${anrede}", "vorname": "${vorname}", "nachname": "${nachname}", "str": "${str}", "hausnr": "${hausnr}", "plz": "${plz}", "ort": "${ort}", "email": "${email}"}`;
+	var jsondata = `{ "id": "${id}","anrede": "${anrede}", "vorname": "${vorname}", "nachname": "${nachname}", "str": "${str}", "hausnr": "${hausnr}", "plz": "${plz}", "ort": "${ort}", "email": "${email}"}`;
 	console.log(jsondata);
-	
-	fetch("http://localhost:8080/json/person", {
+
+	fetch('http://localhost:8080/json/person', {
 		method: 'POST', // or 'PUT'
 		body: jsondata,
 		headers: {
-			'Content-Type': 'application/json'	
+			'Content-Type': 'application/json'
 		}
 	});
-	
+
 }
 
+
+function oninputdelclick(event) {
+	event.preventDefault();  // verhindert das Neuladen der Seite
+	var id = document.getElementById("id").value;
+	console.log(id);
+	fetch(`http://localhost:8080/json/person/${id}`, {
+		method: 'DELETE' 
+
+	});
+}
+
+//  delete button
+var inputdel = document.getElementById("delbutton");
+inputdel.addEventListener("click", oninputdelclick);
+
+
+// Eingabebutton
 var input = document.getElementById("button");
-input.addEventListener("click",oninputclick);
+input.addEventListener("click", oninputclick);
 
 fetch("http://localhost:8080/json/persons/all")
 	.then(getJson) 								//  entspricht: .then( irgendwas => irgendwas.json() )
 	.then(getTxtFromJsonUndPackInsHTML) 		// entpricht: cell.textContent = myjson.personen[0].vorname);
-	
+
+
