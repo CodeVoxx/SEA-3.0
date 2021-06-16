@@ -38,4 +38,10 @@ public class PersonService {
 		System.out.println("Person wurde angelegt!");
 		return person;
 	}
+
+	public Person del(String id) {
+		personRepository.del(id);
+		System.out.println("Person wurde gelöscht!");
+		return null;
+	}
 }

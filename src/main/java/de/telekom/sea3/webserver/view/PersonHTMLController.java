@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import de.telekom.sea3.webserver.service.PersonService;
 
-@Controller
+@Controller  // liefert HTML und kein Json
 public class PersonHTMLController {
 
 	private static final String HTMLTEMPLATE = "<!DOCTYPE html> <html lang='de'> "
