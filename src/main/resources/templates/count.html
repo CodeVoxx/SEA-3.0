@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang='de'
+xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0'>
+<title>Titel</title>
+</head>
+<body>
+<h1 th:text="${cou}">Hello World!</h1>
+<h1 th:text="|Hello ${cou}!|"> default text </h1>
+
+
+<ul th:each="food : ${lunch}">
+    <li th:text="${food.name}">Name</li>
+    <li th:text="${food.calories}">Calories</li>
+</ul>
+</body>
+</html>

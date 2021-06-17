@@ -1,0 +1,44 @@
+<html lang="de">
+<head>
+<title>Personen</title>
+<link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
+<link rel="stylesheet" href="css/mycss.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="javaScript/myscript.js" type="module"></script>
+</head>
+<!-- body: sichtbare Bereich -->
+<body>
+	<h1>Liste der Personen</h1>
+	<!-- h: header -->
+	<table>
+		<table id="tid00d1" class="table .table">
+			<thead>
+				<tr>
+					<th scope="col">Nr.:</th>
+					<th scope="col">Bild:</th>
+					<th scope="col">Id.:</th>
+					<th scope="col">Vorname:</th>
+					<th scope="col">Nachname:</th>
+					<th scope="col">Strasse:</th>
+					<th scope="col">Hausnummer:</th>
+					<th scope="col">PLZ:</th>
+					<th scope="col">Ort:</th>
+					<th scope="col">E-Mail:</th>
+				</tr>
+			</thead>
+			<tbody id="tbody1">
+				<tr th:each="Person : ${personenList}">
+					<td th:text="${Person.id}">ID</td>
+					<td th:text="${Person.vorname}">Vorname</td>
+					<td th:text="${Person.nachname}">Nachname</td>
+					<td th:text="${Person.str}">Strasse</td>			
+					<td th:text="${Person.hausnr}">Hausnr</td>	
+					<td th:text="${Person.plz}">plz</td>	
+					<td th:text="${Person.ort}">ort</td>	
+					<td th:text="${Person.email}">email</td>	
+				</tr>
+			</tbody>
+		</table>
+</body>
+</html>
