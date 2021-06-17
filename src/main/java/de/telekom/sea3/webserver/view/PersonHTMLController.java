@@ -48,5 +48,14 @@ public class PersonHTMLController {
 			model.addAttribute("cou", name); // cou Platzhalter in der HTML Seite
 			return "count";
 		}
+		
+		
+		// URL:"http://localhost:8080/size2"
+		@GetMapping("/size2")  // Kein @ResponseBody, da es ... verhindert
+		public String getSize2(Model model) {
+			model.addAttribute("size3", personService.getSize());
+			return "size";
+		}
+		
 	
 }
