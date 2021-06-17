@@ -4,7 +4,9 @@ package de.telekom.sea3.webserver.view;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import de.telekom.sea3.webserver.service.PersonService;
@@ -35,10 +37,16 @@ public class PersonHTMLController {
 	}
 	
 	// URL:"http://localhost:8080/count"
-	@GetMapping("/count")
-	public String getCount() {
-		String string = "count";
-		return string;
-	}
+		@GetMapping("/count")
+		public String getCount(Model model,
+				@RequestParam(value = "name", 
+						required = false, 
+						defaultValue = "World") 
+						String name
+		) {
+			String string = "Hallo";
+			model.addAttribute("cou", name); // cou Platzhalter in der HTML Seite
+			return "count";
+		}
 	
 }
