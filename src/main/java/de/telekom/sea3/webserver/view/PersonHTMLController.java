@@ -38,13 +38,13 @@ public class PersonHTMLController {
 	
 	// URL:"http://localhost:8080/count"
 		@GetMapping("/count")
-		public String getCount(Model model,
-				@RequestParam(value = "name", 
+		public String getCount(Model model, 
+				@RequestParam(value = "name",   // Aufruf mit "http://localhost:8080/count/?name=Gerd" 
 						required = false, 
 						defaultValue = "World") 
 						String name
 		) {
-			String string = "Hallo";
+//			String string = "Hallo";
 			model.addAttribute("cou", name); // cou Platzhalter in der HTML Seite
 			return "count";
 		}
