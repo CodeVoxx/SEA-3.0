@@ -31,9 +31,14 @@ public class PersonHTMLController {
 	@ResponseBody
 	public String getSize() {
 		String string5 = String.format(HTMLTEMPLATE, personService.getSize());
-
 		return string5;
 	}
 	
-
+	// URL:"http://localhost:8080/count"
+	@GetMapping("/count")
+	public String getCount() {
+		String string = "count";
+		return string;
+	}
+	
 }
