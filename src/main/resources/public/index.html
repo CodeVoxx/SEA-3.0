@@ -1,71 +1,98 @@
-<!DOCTYPE html>
 <html lang="de">
 <head>
+<title>Personen</title>
 <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
-<link rel="stylesheet" href="css/normalize.css">
-<link rel="stylesheet" href="css/skeleton.css">
-<!--  <link href="css/bootstrap.min.css" rel="stylesheet"> -->
+
+<!--  <link rel="stylesheet" href="css/normalize.css"> -->
+<!--     <link rel="stylesheet" href="css/skeleton.css">  -->
+<!--   <link href="css/bootstrap.min.css" rel="stylesheet">-->
+
+
 <link rel="stylesheet" href="css/mycss.css">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SEA Kurs - Personen</title>
+
+
 <script src="javaScript/myscript.js" type="module"></script>
+
+<!--  
+<script>
+	var para = document.getElementById("id4711");
+	para.textContent = 'Erster Paragraph';
+</script>
+-->
+
+
 </head>
+<!-- body: sichtbare Bereich -->
 <body>
-	<h1>SEA Kurs - Welle 4</h1>
-	<p>Liste der Personen:</p>
-	<table class="table table-bordered" id="tid001">
-		<thead>
-			<tr>
-				<th scope="col">Nr.</th>
-				<th scope="col">ID</th>
-				<th scope="col">Bild</th>
-				<th scope="col">Anrede</th>
-				<th scope="col">Vorname</th>
-				<th scope="col">Nachname</th>
-				<th scope="col">Strasse</th>
-				<th scope="col">HausNr.</th>
-				<th scope="col">PLZ</th>
-				<th scope="col">Ort</th>
-				<th scope="col">E-Mail</th>
-			</tr>
-		</thead>
-		<tbody>
-		</tbody>
-	</table>
+
+
+	<h1>Liste der Personen</h1>
+	<!-- h: header -->
+
+	<table>
+		<table id="tid001" class="table .table">
+			<thead>
+				<tr>
+					<th scope="col">Nr.:</th>
+					<th scope="col">Bild:</th>
+					<th scope="col">Id.:</th>	
+					<th scope="col">Vorname:</th>
+					<th scope="col">Nachname:</th>
+					<th scope="col">Strasse:</th>		
+					<th scope="col">Hausnummer:</th>
+					<th scope="col">PLZ:</th>			
+					<th scope="col">Ort:</th>						
+					<th scope="col">E-Mail:</th>	
+				</tr>
+			</thead>
+			<tbody>
+
+
+			</tbody>
+		</table>
 	<hr>
-	<article class="forecast">
-		<h5>Join us!</h5>
+		<article class="forecast">
+			<h5>Eintragen:</h5>
+
 			<form id="submit">
-				<label for="id: ">id:</label> 
-				<input id="id" type="text" name="id"> <br> 
-				<label for="anrede :">Anrede:</label>
+				<label for="anrede">Anrede:</label><br>
 					<select name="anrede" id="anrede">
 						<option value="Auswahl">Bitte wählen Sie</option>
-						<option value="mr">Herr</option>
-						<option value="miss">Frau</option>
-						<option value="other">Divers</option>
+						<option value="Herr">Herr</option>
+						<option value="Frau">Frau</option>
 					</select>
-<!--			<input type="text" id="salut" name="salut"><br> -->
-				<label for="vorname">First name:</label> 
+					<br>
+				<label for="id">ID:</label> <br> 
+				<input id="id" type="text" name="id"> <br> 
+				<label for="vorname">Vorname:</label> <br> 
 				<input id="vorname" type="text" name="vorname"> <br> 
-				<label for="nachname">Last	name:</label> 
+				<label for="nachname">Nachname:</label> <br> 
 				<input id="nachname" type="text" name="nachname"> <br> 
-				<label for="str">Strasse: *</label> 
+				<label for="str">Strasse:</label> <br> 
 				<input type="text" id="str" name="str">	<br>
-				<label for="hausnr">HausNr.: *</label> 
+				<label for="hausnr">HausNr.:</label> <br> 
 				<input type="text" id="hausnr" name="hausnr"> <br>
-				<label for="plz">Postleitzahl: *</label> 
+				<label for="plz">Postleitzahl:</label> <br> 
 				<input type="text" id="plz" name="plz"> <br>
-				<label for="ort">Ort: *</label> 
+				<label for="ort">Ort:</label> <br> 
 				<input type="text" id="ort" name="ort"> <br>		
-				<label for="email">E-Mail: *</label> 
+				<label for="email">E-Mail:</label> <br> 
 				<input type="text" id="email" name="email"> <br>
+				<br>
 				<input id="button" type="submit"  value="Submit">
 				<br>
-				<input id="delbutton" type="submit"  value="Delete">
+				<input id="delbutton" type="submit"  value="Delete">				
+				
 			</form>
-	</article>
-	<hr>
+		</article>
+	</hr>
+	
+	
+
+
+
+	
 </body>
 </html>
