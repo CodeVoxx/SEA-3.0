@@ -25,17 +25,22 @@ public class PersonService {
 	public Long getSize() {
 		return personRepository.count();
 	}
-
 	
-	public Iterable<Person> getAllPersons() {
-		return personRepository.findAll();
+	public Personen getAllPersons() {
+		Personen personen = new Personen();
+		for (Person p : personRepository.findAll()) {
+			personen.getPersonen().add(p);
+		}
+		return personen;
 	}
 
-	public Optional<Person> get(Long id) {
-		
-		return personRepository.findById(id);
+	public Person get(Long id) {
+		if (personRepository.findById(id).isPresent()) {
+			return personRepository.findById(id).get();
+			} else {
+			return null;
+		}
 	}
-
 	public Person add(Person person) {
 		personRepository.save(person);
 		System.out.println("Person wurde angelegt!");

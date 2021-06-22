@@ -29,7 +29,7 @@ public class PersonHTMLController {
 		this.personService = personService; // Übergabe personService
 	}
 
-	// URL: "http://localhost:8080/size"
+	// URL: "http://localhost:8222/size"
 	@GetMapping("/size")
 	@ResponseBody   // sagt dem Spring Framework, dass die Antwort in den Body gepackt werden soll und nicht über das Template
 	public String getSize() {
@@ -37,7 +37,7 @@ public class PersonHTMLController {
 		return string5;
 	}
 	
-	// URL:"http://localhost:8080/count"
+	// URL:"http://localhost:8222/count"
 		@GetMapping("/count")   // kein @ResponseBody, da es sonst den Weg über das Template verhindert.
 		public String getCount(Model model, 
 				@RequestParam(value = "name",   // Aufruf mit "http://localhost:8080/count/?name=Gerd" 
@@ -51,19 +51,18 @@ public class PersonHTMLController {
 		}
 		
 		
-		// URL:"http://localhost:8080/size2"
+		// URL:"http://localhost:8222/size2"
 		@GetMapping("/size2")  // kein @ResponseBody, da es sonst den Weg über das Template verhindert.
 		public String getSize2(Model model) {
 			model.addAttribute("size3", personService.getSize());
 			return "size";
 		}
 		
-		// URL:"http://localhost:8080/size2"
+		// URL:"http://localhost:8222/personen"
 		@GetMapping("/personen")  // kein @ResponseBody, da es sonst den Weg über das Template verhindert.
 		public String getPersonen(Model model) {
 			Personen personen = personService.getAllPersons();
 			model.addAttribute("personenList", personen.getPersonen());
 			return "personen";
 		}
-	
-}
+	}

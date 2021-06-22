@@ -5,6 +5,7 @@ import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -33,19 +34,28 @@ public class PersonRestController {
 	}
 	
 	@GetMapping("/json/persons/size")
-	public Size getSize() {
-		return new Size(personService.getSize());
+	public Long getSize() {
+		return personService.getSize();
 	}
 	
-	@DeleteMapping("/json/person/{id}")  // id in geschweiften Klammern ist Variabel
-	public Person getPerson(@PathVariable("id") String id) {
-		return personService.del(id);
+	@GetMapping("/json/person/{id}")  // id in geschweiften Klammern ist Variabel
+	public Person getPerson(@PathVariable("id") Long id) {
+		return personService.get(id);
 	}
-	
-	
-	
+		
 	@PostMapping("/json/person")
 	public Person addPerson(@RequestBody Person person)  {
 		return personService.add(person);
 	}
+	
+	@DeleteMapping("/json/person/{id}")  // id in geschweiften Klammern ist Variabel
+	public Person delPerson(@PathVariable("id") Long id) {
+		return personService.del(id);
+	}
+	@PutMapping("/json/person")
+	public Person updatePerson(@RequestBody Person person)  {
+		return personService.update(person);
+	}
+	
+	
 }

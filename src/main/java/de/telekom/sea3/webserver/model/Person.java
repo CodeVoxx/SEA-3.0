@@ -5,10 +5,10 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-@Entity  // entspricht der "Zeile" in der Datenbanktabelle
-@Table(name="persons")
+@Entity // entspricht der "Zeile" in der Datenbanktabelle
+@Table(name = "persons")
 public class Person {
-	
+
 	@Id
 	private Long id;
 	@Column
@@ -27,12 +27,10 @@ public class Person {
 	private String ort;
 	@Column
 	private String email;
-	
-		
-	
-	public Person(Integer Long, String anrede, String vorname, String nachname, String str,  
-			String hausnr, String plz, String ort, String email ) {
-		this.Long = id;
+
+	public Person(Long id, String anrede, String vorname, String nachname, String str, String hausnr, String plz,
+			String ort, String email) {
+		this.id = id;
 		this.anrede = anrede;
 		this.vorname = vorname;
 		this.nachname = nachname;
@@ -41,9 +39,12 @@ public class Person {
 		this.plz = plz;
 		this.ort = ort;
 		this.email = email;
-		
-		}
+	}
 	
+	public Person() {
+		
+	}
+
 	public Long getId() {
 		return id;
 	}
@@ -52,21 +53,26 @@ public class Person {
 		this.id = id;
 	}
 
-		public String getVorname() {
+	public String getVorname() {
 		return vorname;
 	}
+
 	public void setVorname(String vorname) {
 		this.vorname = vorname;
 	}
+
 	public String getNachname() {
 		return nachname;
 	}
+
 	public void setNachname(String nachname) {
 		this.nachname = nachname;
 	}
+
 	public String getAnrede() {
 		return anrede;
 	}
+
 	public void setAnrede(String anrede) {
 		this.anrede = anrede;
 	}
@@ -95,11 +101,9 @@ public class Person {
 		this.plz = plz;
 	}
 
-
 	public String getOrt() {
 		return ort;
 	}
-
 
 	public void setOrt(String ort) {
 		this.ort = ort;
@@ -112,6 +116,5 @@ public class Person {
 	public void setEmail(String email) {
 		this.email = email;
 	}
-	
-	
+
 }
