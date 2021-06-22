@@ -94,7 +94,7 @@ inputdel.addEventListener("click", oninputdelclick);
 var input = document.getElementById("button");
 input.addEventListener("click", oninputclick);
 
-fetch("http://localhost:8080/json/persons/all")
+fetch("/json/persons/all")
 	.then(getJson) 								//  entspricht: .then( irgendwas => irgendwas.json() )
 	.then(getTxtFromJsonUndPackInsHTML) 		// entpricht: cell.textContent = myjson.personen[0].vorname);
 
