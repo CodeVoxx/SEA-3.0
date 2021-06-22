@@ -5,7 +5,7 @@ import org.springframework.stereotype.Repository;
 
 import de.telekom.sea3.webserver.model.Person;
 
-@Repository 
-interface PersonRepository extends CrudRepository<Person,Long>{
+@Repository // Implementierung der Klasse uebernimmt Spring
+public interface PersonRepository extends CrudRepository<Person,Long>{
 
 }

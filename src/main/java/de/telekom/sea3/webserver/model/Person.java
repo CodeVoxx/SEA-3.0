@@ -10,7 +10,7 @@ import javax.persistence.Table;
 public class Person {
 	
 	@Id
-	private Integer id;
+	private Long id;
 	@Column
 	private String anrede;
 	@Column
@@ -30,9 +30,9 @@ public class Person {
 	
 		
 	
-	public Person(Integer id, String anrede, String vorname, String nachname, String str,  
+	public Person(Integer Long, String anrede, String vorname, String nachname, String str,  
 			String hausnr, String plz, String ort, String email ) {
-		this.id = id;
+		this.Long = id;
 		this.anrede = anrede;
 		this.vorname = vorname;
 		this.nachname = nachname;
@@ -44,11 +44,11 @@ public class Person {
 		
 		}
 	
-	public Integer getId() {
+	public Long getId() {
 		return id;
 	}
 
-	public void setId(Integer id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 
