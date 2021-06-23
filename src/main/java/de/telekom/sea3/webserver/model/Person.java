@@ -2,21 +2,29 @@ package de.telekom.sea3.webserver.model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.persistence.Version;
 
 @Entity // entspricht der "Zeile" in der Datenbanktabelle
 @Table(name = "persons")
 public class Person {
 
 	@Id
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Long id;
+	@Version
+	private Long version;
 	@Column
 	private String anrede;
 	@Column
 	private String vorname;
 	@Column
 	private String nachname;
+	@Column
+	private String bday;
 	@Column
 	private String str;
 	@Column
@@ -28,12 +36,14 @@ public class Person {
 	@Column
 	private String email;
 
-	public Person(Long id, String anrede, String vorname, String nachname, String str, String hausnr, String plz,
+	public Person(Long id, Long version, String anrede, String vorname, String nachname, String bday, String str, String hausnr, String plz,
 			String ort, String email) {
 		this.id = id;
+		this.version = version;
 		this.anrede = anrede;
 		this.vorname = vorname;
 		this.nachname = nachname;
+		this.bday = bday;
 		this.str = str;
 		this.hausnr = hausnr;
 		this.plz = plz;
@@ -42,8 +52,7 @@ public class Person {
 	}
 	
 	public Person() {
-		
-	}
+			}
 
 	public Long getId() {
 		return id;
@@ -51,6 +60,10 @@ public class Person {
 
 	public void setId(Long id) {
 		this.id = id;
+	}	
+	
+	public void setVersion(Long version) {
+		this.version = version;
 	}
 
 	public String getVorname() {
@@ -63,6 +76,11 @@ public class Person {
 
 	public String getNachname() {
 		return nachname;
+	}
+		
+
+	public String getBday() {
+		return bday;
 	}
 
 	public void setNachname(String nachname) {
@@ -107,6 +125,14 @@ public class Person {
 
 	public void setOrt(String ort) {
 		this.ort = ort;
+	}
+	
+	public Long getVersion() {
+		return version;
+	}
+
+	public void setBday(String bday) {
+		this.bday = bday;
 	}
 
 	public String getEmail() {

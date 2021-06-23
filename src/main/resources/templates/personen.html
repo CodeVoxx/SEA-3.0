@@ -15,16 +15,18 @@
 		<table id="tid00d1" class="table .table">
 			<thead>
 				<tr>
-					<th scope="col">Nr.:</th>
+					<th scope="col">ID.:</th>
 					<th scope="col">Bild:</th>
 					<th scope="col">Id.:</th>
 					<th scope="col">Vorname:</th>
 					<th scope="col">Nachname:</th>
+					<th scope="col">Geburtstag:</th>					
 					<th scope="col">Strasse:</th>
 					<th scope="col">Hausnummer:</th>
 					<th scope="col">PLZ:</th>
 					<th scope="col">Ort:</th>
 					<th scope="col">E-Mail:</th>
+					<th scope="col">Version:</th>
 				</tr>
 			</thead>
 			<tbody id="tbody1">
@@ -32,11 +34,13 @@
 					<td th:text="${Person.id}">ID</td>
 					<td th:text="${Person.vorname}">Vorname</td>
 					<td th:text="${Person.nachname}">Nachname</td>
+					<td th:text="${Person.bday}">Geburtsdatum</td>
 					<td th:text="${Person.str}">Strasse</td>			
 					<td th:text="${Person.hausnr}">Hausnr</td>	
-					<td th:text="${Person.plz}">plz</td>	
-					<td th:text="${Person.ort}">ort</td>	
-					<td th:text="${Person.email}">email</td>	
+					<td th:text="${Person.plz}">PlZ</td>	
+					<td th:text="${Person.ort}">Ort</td>	
+					<td th:text="${Person.email}">eMail</td>
+					<td th:text="${Person.version}">version</td>		
 				</tr>
 			</tbody>
 		</table>
