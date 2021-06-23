@@ -18,16 +18,18 @@
 		<thead>
 			<tr>
 				<th scope="col">Nr.</th>
-				<th scope="col">ID</th>
 				<th scope="col">Bild</th>
+				<th scope="col">ID</th>
 				<th scope="col">Anrede</th>
 				<th scope="col">Vorname</th>
 				<th scope="col">Nachname</th>
+				<th scope="col">Geburtstag</th>
 				<th scope="col">Strasse</th>
 				<th scope="col">HausNr.</th>
 				<th scope="col">PLZ</th>
 				<th scope="col">Ort</th>
 				<th scope="col">E-Mail</th>
+				<th scope="col">Version</th>
 			</tr>
 		</thead>
 		<tbody>
@@ -37,7 +39,7 @@
 	<article class="forecast">
 		<h5>Join us!</h5>
 			<form id="submit">
-				<label for="id: ">id:</label> 
+				<label for="id: ">ID (wird automatisch vergeben):</label> 
 				<input id="id" type="text" name="id"> <br> 
 				<label for="anrede :">Anrede:</label>
 					<select name="anrede" id="anrede">
@@ -47,10 +49,12 @@
 						<option value="other">Divers</option>
 					</select>
 <!--			<input type="text" id="salut" name="salut"><br> -->
-				<label for="vorname">First name:</label> 
+				<label for="vorname">Vorname:</label> 
 				<input id="vorname" type="text" name="vorname"> <br> 
-				<label for="nachname">Last	name:</label> 
+				<label for="nachname">Nachname:</label> 
 				<input id="nachname" type="text" name="nachname"> <br> 
+				<label for="bday">Geburtstag:</label> 
+				<input id="bday" type="date" name="bday"> <br> 
 				<label for="str">Strasse: *</label> 
 				<input type="text" id="str" name="str">	<br>
 				<label for="hausnr">HausNr.: *</label> 
@@ -61,6 +65,11 @@
 				<input type="text" id="ort" name="ort"> <br>		
 				<label for="email">E-Mail: *</label> 
 				<input type="text" id="email" name="email"> <br>
+				
+				<label for="version">version</label> 
+				<input type="text" id="version" name="version"> <br>
+				
+				
 				<input id="button" type="submit"  value="Submit">
 				<br>
 				<input id="delbutton" type="submit"  value="Delete">

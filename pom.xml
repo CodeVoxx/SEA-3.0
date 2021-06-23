@@ -15,6 +15,11 @@
 		<version>2.5.1</version>
 	</parent>
 	<dependencies>
+	<!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-data-jpa -->
+	<dependency>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-data-jpa</artifactId>
+	</dependency>
 		<!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-web -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -29,6 +34,18 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-thymeleaf</artifactId>
 		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.mariadb.jdbc/mariadb-java-client -->
+	<dependency>
+		<groupId>org.mariadb.jdbc</groupId>
+		<artifactId>mariadb-java-client</artifactId>
+		<version>2.7.3</version>
+	</dependency>
+	<!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
+	<dependency>
+		<groupId>mysql</groupId>
+		<artifactId>mysql-connector-java</artifactId>
+		<version>8.0.25</version>
+	</dependency>
 	</dependencies>
 	<build>
 		<plugins>

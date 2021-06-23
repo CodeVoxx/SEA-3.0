@@ -11,6 +11,9 @@ public class Personen {
 		this.personen = all;
 	}
 
+	public Personen() {
+		}
+
 	public List<Person> getPersonen() {
 		return personen;
 	}
