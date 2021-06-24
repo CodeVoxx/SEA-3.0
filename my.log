@@ -1,0 +1,20 @@
+2021-06-24 14:10:25.071  INFO 22663 --- [main] de.telekom.sea3.webserver.WebServer      : Starting WebServer v1.0 using Java 11.0.11 on gerd-sea with PID 22663 (/home/gerdb/eclipse-workspace/SEA-3.0/target/SEA-3.0-1.0.jar started by gerdb in /home/gerdb/eclipse-workspace/SEA-3.0)
+2021-06-24 14:10:25.075  INFO 22663 --- [main] de.telekom.sea3.webserver.WebServer      : No active profile set, falling back to default profiles: default
+2021-06-24 14:10:28.725  INFO 22663 --- [main] d.t.s.webserver.service.PersonService    : [INFO] PersonService instanziiert: de.telekom.sea3.webserver.service.PersonService 
+2021-06-24 14:10:28.725  INFO 22663 --- [main] d.t.s.webserver.service.PersonService    : [INFO] PersonRepository durch Annotation instanziiert: org.springframework.data.jpa.repository.support.SimpleJpaRepository@301aa982 
+2021-06-24 14:10:29.394  INFO 22663 --- [main] de.telekom.sea3.webserver.WebServer      : Started WebServer in 5.1 seconds (JVM running for 5.678)
+2021-06-24 15:04:10.557  INFO 24019 --- [main] de.telekom.sea3.webserver.WebServer      : Starting WebServer v1.0 using Java 11.0.11 on gerd-sea with PID 24019 (/home/gerdb/eclipse-workspace/SEA-3.0/target/SEA-3.0-1.0.jar started by gerdb in /home/gerdb/eclipse-workspace/SEA-3.0)
+2021-06-24 15:04:10.560  INFO 24019 --- [main] de.telekom.sea3.webserver.WebServer      : No active profile set, falling back to default profiles: default
+2021-06-24 15:04:13.596  INFO 24019 --- [main] d.t.s.webserver.service.PersonService    : [INFO] PersonService instanziiert: de.telekom.sea3.webserver.service.PersonService 
+2021-06-24 15:04:13.597  INFO 24019 --- [main] d.t.s.webserver.service.PersonService    : [INFO] PersonRepository durch Annotation instanziiert: org.springframework.data.jpa.repository.support.SimpleJpaRepository@40f8f5a8 
+2021-06-24 15:04:14.232  INFO 24019 --- [main] de.telekom.sea3.webserver.WebServer      : Started WebServer in 9.374 seconds (JVM running for 9.894)
+2021-06-24 15:30:05.301  INFO 24950 --- [main] de.telekom.sea3.webserver.WebServer      : Starting WebServer v1.0 using Java 11.0.11 on gerd-sea with PID 24950 (/home/gerdb/eclipse-workspace/SEA-3.0/target/SEA-3.0-1.0.jar started by gerdb in /home/gerdb/eclipse-workspace/SEA-3.0)
+2021-06-24 15:30:05.303  INFO 24950 --- [main] de.telekom.sea3.webserver.WebServer      : No active profile set, falling back to default profiles: default
+2021-06-24 15:30:08.147  INFO 24950 --- [main] d.t.s.webserver.service.PersonService    : [INFO] PersonService instanziiert: de.telekom.sea3.webserver.service.PersonService 
+2021-06-24 15:30:08.147  INFO 24950 --- [main] d.t.s.webserver.service.PersonService    : [INFO] PersonRepository durch Annotation instanziiert: org.springframework.data.jpa.repository.support.SimpleJpaRepository@5445f5ba 
+2021-06-24 15:30:08.613  INFO 24950 --- [main] de.telekom.sea3.webserver.WebServer      : Started WebServer in 9.013 seconds (JVM running for 9.57)
+2021-06-24 15:34:06.393  INFO 25250 --- [main] de.telekom.sea3.webserver.WebServer      : Starting WebServer v1.0 using Java 11.0.11 on gerd-sea with PID 25250 (/home/gerdb/eclipse-workspace/SEA-3.0/target/SEA-3.0-1.0.jar started by gerdb in /home/gerdb/eclipse-workspace/SEA-3.0)
+2021-06-24 15:34:06.395  INFO 25250 --- [main] de.telekom.sea3.webserver.WebServer      : No active profile set, falling back to default profiles: default
+2021-06-24 15:34:08.808  INFO 25250 --- [main] d.t.s.webserver.service.PersonService    : [INFO] PersonService instanziiert: de.telekom.sea3.webserver.service.PersonService 
+2021-06-24 15:34:08.809  INFO 25250 --- [main] d.t.s.webserver.service.PersonService    : [INFO] PersonRepository durch Annotation instanziiert: org.springframework.data.jpa.repository.support.SimpleJpaRepository@40f8f5a8 
+2021-06-24 15:34:09.208  INFO 25250 --- [main] de.telekom.sea3.webserver.WebServer      : Started WebServer in 3.715 seconds (JVM running for 4.202)
